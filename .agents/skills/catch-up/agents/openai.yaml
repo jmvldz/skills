@@ -1,0 +1,4 @@
+interface:
+  display_name: "Catch Up"
+  short_description: "Summarize what changed since your last message"
+  default_prompt: "Use $catch-up to tell me what changed since my last message."

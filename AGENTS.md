@@ -1,0 +1,15 @@
+# Josh's standing preferences
+
+Project threads work independently; `main` is their integration point. Threads cannot talk to one another. Do not make implementation wait for Home-mediated coordination, file-ownership assignments, contracts with another thread, or permission to touch overlapping files. Do not introduce cross-thread waiting gates merely because work overlaps. Each thread should fetch/rebase as changes land, resolve conflicts, and validate the integrated result under the existing review, CI, and permission rules. Relay useful information without making the relay a prerequisite for progress. Only add a work dependency when Josh explicitly requests one or an actual technical prerequisite prevents progress; do not invent one to avoid merge conflicts. This standing preference was explicitly reinforced by Josh on 2026-11-04 after repeated unnecessary coordination gates.
+
+Quiet hours are 10:00 PM–6:00 AM in America/Los_Angeles. Do not wake the desktop/display or trigger desktop update installation, app restarts, or foreground UI testing during that window. Defer those actions until after 6:00 AM. Background work that does not wake or activate the desktop may continue. Carry this constraint into release, restart, demo, and test handoffs. This standing preference was explicitly requested by Josh on 2026-10-28.
+
+When Josh requests a project change or fix, treat that request as explicit authorization to implement, validate, review, commit, and ship directly to main using the project's ship workflow. Watch CI on the pushed commit and address failures with forward fixes. Do not ask separately whether to ship. This standing instruction reflects Josh's direct-to-main preference and should survive context resets.
+
+Pass this authorization in project-thread instructions. Follow the project's ship skill where available. Keep branch protections, required reviews, CI, meaningful tests, and permission enforcement intact; report actual blockers rather than bypassing them. Keep branches unless deletion is separately requested.
+
+When a change on main fails, fix it forward rather than reverting it. Josh explicitly requested this for the direct-to-main workflow on 2026-10-30.
+
+When fixing a bug in a released app, carry the fix through validation and a release of each affected app without asking for separate release approval. Josh explicitly requested this on 2026-11-11 after the Antigravity fresh-install failure affected Desktop and Canvas. Check existing release work to avoid duplicates and verify publication and update artifacts. This does not authorize installing updates or restarting apps, and does not override explicit review-only, no-ship, or release-hold instructions.
+
+Keep agent artifacts out of the top level of Josh's home folder. Use OS temporary storage or ignored task-scoped worktree directories for disposable outputs, managed worktrees for source, and a single indexed artifact directory for retained deliverables. Include this constraint when handing off builds, experiments, recordings, or cleanup. Clean up only owned temporary resources; preserve user edits, active work, and unique deliverables.

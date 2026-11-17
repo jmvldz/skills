@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Up Threads"
+  short_description: "Archive finished threads and keep anything active"
+  default_prompt: "Use $clean-up-threads to archive finished and unused threads in this project."
