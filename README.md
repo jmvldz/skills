@@ -1,4 +1,4 @@
-# Nuanced Home
+# skills
 
 Josh’s [standing instructions](AGENTS.md) guide how Nuanced Home coordinates project threads, ships changes, and respects quiet hours.
 
